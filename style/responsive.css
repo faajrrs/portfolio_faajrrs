@@ -63,15 +63,61 @@
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         margin: 0.6rem 0 2.5rem;
     }
 
     .pre-title {
         font-size: 0.8rem;
     }
+
+    /* Hero Section */
+    #hero {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .hero-right {
+        order: -1;
+        margin-bottom: 5rem;
+    }
+
+    .hero-right img {
+        width: 70%;
+    }
+
+    .hero-left {
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    .hero-left .pre-title {
+        margin: 0 auto;
+    }
+
+    .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        gap: 1rem;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 2rem 0;
+    }
 }
 
 @media screen and (max-width: 640px) {
-    
+    /* Titles */
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .pre-title {
+        font-size: 0.7rem;
+    }
 }
