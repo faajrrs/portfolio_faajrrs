@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portofolio - Faajrrs</title>
-    <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="images/logo.png" type="logo">
+  <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/responsive.css">
 </head>
 <body>
@@ -43,9 +44,12 @@
                     <h3 class="pre-title">HELLO MY NAME IS</h3>
                     <h1 class="hero-name">Fajar <span>Satria Sebastian</span></h1>
                     <p>
-                        Saya Fajar Satria Sebastian, 21 tahun dari Pacitan, saya adalah lulusan Pemeliharaan Komputer dan Jaringan
-                        dari Akademi Komunitas Negeri Pacitan dan seorang desainer grafis. Saya memiliki tekad yang kuat untuk menjadi
-                        desainer grafis yang kreatif di masa depan.
+                        Saya Fajar Satria Sebastian, 21 tahun, berasal dari Pacitan. 
+                        Saya adalah lulusan Diploma 2 Pemeliharaan Komputer dan Jaringan 
+                        dari Akademi Komunitas Negeri Pacitan. Saat ini, saya merupakan 
+                        seorang desainer grafis dan junior programmer dengan tekad untuk 
+                        terus mengembangkan kreativitas di bidang desain grafis dan menjadi 
+                        web programmer di masa depan.
                     </p>
                 </div>
                 <div class="hero-right">
@@ -287,12 +291,12 @@
      <section id="contact">
         <div class="contact main-container">
             <div class="contact-left">
-                <form class="contact-form" action="https://formspree.io/f/xpwqrdbk" method="POST">
+                <form onsubmit="SendMessage()" class="contact-form" action="https://formspree.io/f/xpwqrdbk" method="POST">
                     <div>
-                        <input type="text" placeholder="Name" name="name">
+                        <input id="name" type="text" placeholder="Name" name="name" required>
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email">
+                        <input id="email" type="email" placeholder="Email" name="email" required>
                     </div>
                     <div>
                         <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
@@ -375,5 +379,16 @@
     <!-- End Of Footer -->
 
     <script src="scripts/main.js"></script>
+    <script>
+        function SendMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const url = "https://api.whatsapp.com/send?phone=6289527065383&text=Halo%20Kak%20Fajar%2C%20saya%20*"+ name +"*.%20Saya%20ingin%20menghubungi%20Anda%20melalui%20website%20portfolios%20Anda.%20Berikut%20detail%20pesan%20saya%3A%0A%0A%F0%9F%93%A7%20Email%3A%20*"+ email +"*%0A%F0%9F%92%AC%20Pesan%3A%20*"+ message +"*%0A%0ATerima%20kasih%2C%20saya%20menunggu%20respon%20dari%20Kak%20Fajar.%20%F0%9F%99%8F%F0%9F%98%8A"
+
+            window.open(url);
+        }
+    </script>
 </body>
 </html>
