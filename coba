@@ -1,0 +1,38 @@
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xpwqrdbk" method="POST" onsubmit="sendWhatsAppMessage(event)">
+                    <div>
+                        <input type="text" placeholder="Name" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Message" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </div>
+                </form>
+
+
+<script>
+       function sendWhatsAppMessage(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Prepare the WhatsApp message
+        const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+        // Send to WhatsApp using the API link format
+        const whatsappURL = `https://api.whatsapp.com/send?phone=6281231209078&text=Hallo%20Admin%0ANama%20saya%20%22name%22%0AEmail%20saya%20%22email%22%0A%0A%22message%22=${whatsappMessage}`;
+
+        // Open the WhatsApp link
+        window.open(whatsappURL, "_blank");
+
+        // Now submit the form to Formspree
+        document.getElementById("contactForm").submit();
+    }
+    </script>

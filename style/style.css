@@ -348,6 +348,10 @@ nav ul li a {
     margin-top: 25px;
 }
 
+.skills-right {
+    text-align: justify;
+}
+
 .skills-right ul {
     line-height: 2rem;
     padding: 0 1rem;
