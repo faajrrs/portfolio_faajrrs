@@ -14,6 +14,7 @@
     
     --primaryIconColor: #7e74f1;
     --primaryIconColorHover: #5d51e8;
+    --primaryAvatar: #060042;
 
     --sectionPadding: 6rem 0;
 
@@ -177,6 +178,11 @@ nav ul li a {
 
 .hero-right img {
     width: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primaryIconColor);
+    filter: drop-shadow(0 0 100px var(--primaryIconColor));
+    background-color: var(--primaryAvatar);
 }
 
 .hero-right {
@@ -342,7 +348,7 @@ nav ul li a {
     margin-top: 25px;
 }
 
-.skills-right {
+.skills-right ul {
     line-height: 2rem;
     padding: 0 1rem;
 }
