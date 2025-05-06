@@ -1,0 +1,39 @@
+/* Responsive Styles */
+@media screen and (max-width: 1440px) {
+    /* Desktop Devices */
+        
+}
+
+@media screen and (max-width: 1000px) {
+/* Laptop Devices */
+    p {
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+/* Tablet Devices */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--header-color-2);
+        border-left: 1px solid var(--header-color-2);
+        z-index: 9;
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: 640px) {
+/* Mobile Devices */
+    
+}
